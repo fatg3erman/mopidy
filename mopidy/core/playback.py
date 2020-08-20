@@ -122,7 +122,7 @@ class PlaybackController:
             return 0
 
     def _on_end_of_stream(self):
-        self.set_state(PlaybackState.STOPPED)
+        # self.set_state(PlaybackState.STOPPED)
         if self._current_tl_track:
             self._trigger_track_playback_ended(self.get_time_position())
         # Race condition can sometimes leave soundcard open, especially
